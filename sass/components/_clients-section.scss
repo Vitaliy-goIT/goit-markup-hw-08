@@ -1,0 +1,30 @@
+.client__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client__item {
+  display: flex;
+}
+
+.client__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+  transition: color $animation, border $animation;
+
+  &:hover,
+  &:focus {
+    border-color: $accent;
+    color: $accent;
+  }
+}
+
+.client__icon {
+  fill: currentColor;
+}

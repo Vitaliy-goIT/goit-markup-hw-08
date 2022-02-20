@@ -1,0 +1,36 @@
+.social-links__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links__item {
+  border-radius: 50%;
+}
+
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: color $animation, background-color $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: $buttonTextColor;
+  }
+
+  &--footer {
+    color: $buttonTextColor;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.social-links__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

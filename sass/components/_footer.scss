@@ -1,0 +1,59 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footerBackgroundColor;
+
+  &__links {
+    margin-left: 70px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $buttonTextColor;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+.contact__item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.address {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $buttonTextColor;
+  text-decoration: none;
+  font-style: normal;
+
+  &--gray {
+    color: $footerLinksColor;
+  }
+}
+
+.subscribe {
+  margin-left: auto;
+}
+
+.email {
+  width: 358px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $buttonTextColor;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

@@ -1,0 +1,21 @@
+.logo {
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: $secondaryTextColor;
+  text-decoration: none;
+
+  &--accent {
+    color: $accent;
+  }
+
+  &--white {
+    color: $buttonTextColor;
+  }
+
+  &--space {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
