@@ -3,8 +3,8 @@
 }
 
 .team__list {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 }
 
 .team__item {
@@ -13,13 +13,21 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $backgroundColor;
+
+  & + & {
+    margin-top: 30px;
+  }
 }
 
 .team__padding {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   padding-left: 32px;
   padding-right: 32px;
+
+  @include desktop {
+    padding-bottom: 30px;
+  }
 }
 
 .team__name {

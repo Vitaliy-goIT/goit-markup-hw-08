@@ -1,14 +1,34 @@
 .peculiarities {
-  padding-bottom: 0;
+  @include desktop {
+    padding-bottom: 0;
+  }
 }
 
 .peculiarities__list {
-  display: flex;
-  justify-content: space-between;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .peculiarities__item {
-  width: 270px;
+  max-width: 100%;
+
+  & + & {
+    margin-top: 30px;
+  }
+
+  @include tablet {
+    flex-basis: calc(50% - 15px);
+    & + & {
+      margin-top: 0;
+    }
+  }
 }
 
 .peculiarities__title {
@@ -19,6 +39,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $secondaryTextColor;
+  text-align: center;
 }
 
 .peculiarities__icon {
@@ -26,8 +47,12 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  width: 270px;
+  max-width: 100%;
   height: 120px;
   background-color: $secondaryBackgroundColor;
   border-radius: 4px;
+
+  @include desktop {
+    width: 270px;
+  }
 }

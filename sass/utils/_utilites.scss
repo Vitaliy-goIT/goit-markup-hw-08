@@ -1,6 +1,36 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: bold;
+    // font-size: 36px;
+    // line-height: 42px;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondaryTextColor;
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+
+  &.hide {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .list {
@@ -20,8 +50,21 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
-  // outline: 2px solid tomato;
+  width: 100%;
+  max-width: 1200px;
+  outline: 2px solid tomato;
+
+  @include tel {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .flex {
