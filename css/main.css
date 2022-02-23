@@ -89,7 +89,6 @@ img {
   padding-right: 15px;
   width: 100%;
   max-width: 1200px;
-  outline: 2px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
