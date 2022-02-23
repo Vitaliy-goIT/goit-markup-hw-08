@@ -1,6 +1,7 @@
 .client__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .client__item {
@@ -11,7 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -22,6 +24,14 @@
   &:focus {
     border-color: $accent;
     color: $accent;
+  }
+
+  @include tablet {
+    width: 226px;
+  }
+
+  @include desktop {
+    width: 170px;
   }
 }
 
