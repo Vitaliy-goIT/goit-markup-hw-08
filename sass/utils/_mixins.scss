@@ -21,3 +21,9 @@
     @content;
   }
 }
+
+@mixin litle {
+  @media screen and (max-width: 280px) {
+    @content;
+  }
+}

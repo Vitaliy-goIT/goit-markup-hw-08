@@ -6,15 +6,24 @@
 
 .client__item {
   display: flex;
+  width: calc(50% - 15px);
+  height: 92px;
+
+  @include tablet {
+    width: calc((100% / 3) - 30px);
+  }
+
+  @include desktop {
+    width: 170px;
+  }
 }
 
 .client__link {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 210px;
-  height: 92px;
+  // height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
@@ -24,6 +33,14 @@
   &:focus {
     border-color: $accent;
     color: $accent;
+  }
+
+  @include litle {
+    width: 100%;
+  }
+
+  @include tel {
+    width: 210px;
   }
 
   @include tablet {
