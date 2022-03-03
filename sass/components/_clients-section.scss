@@ -10,7 +10,7 @@
   height: 92px;
 
   @include tablet {
-    width: calc((100% / 3) - 30px);
+    width: 226px;
   }
 
   @include desktop {
@@ -22,8 +22,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  // max-width: 210px;
   // height: 92px;
+  width: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
@@ -40,15 +41,18 @@
   }
 
   @include tel {
-    width: 210px;
+    min-width: 210px;
   }
 
   @include tablet {
-    width: 226px;
+    // width: 226px;
+    // width: inherit;
+    // width: 100%;
   }
 
   @include desktop {
     width: 170px;
+    min-width: 0;
   }
 }
 

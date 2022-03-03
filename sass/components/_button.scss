@@ -38,3 +38,25 @@
     margin-right: auto;
   }
 }
+
+.burger {
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: $accent;
+  }
+
+  &--close {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      fill: $accent;
+    }
+  }
+}

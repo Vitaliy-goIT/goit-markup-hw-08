@@ -4,10 +4,15 @@
   background-color: $footerBackgroundColor;
 
   &__links {
-    margin-left: 70px;
+    margin-bottom: 60px;
+
+    @include desktop {
+      margin-left: 70px;
+    }
   }
 
   &__title {
+    text-align: center;
     margin-bottom: 20px;
     color: $buttonTextColor;
     font-weight: 700;
@@ -15,6 +20,39 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &__blocks {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+
+      & div {
+        flex: 1 1 50%;
+      }
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
+
+      & div {
+        flex: none;
+      }
+    }
+  }
+
+  &__address {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include desktop {
+      text-align: left;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -38,12 +76,15 @@
 
 .subscribe {
   margin-left: auto;
+  text-align: center;
 }
 
 .email {
-  width: 358px;
+  margin-bottom: 20px;
+  // width: 358px;
+  width: 100%;
   padding: 15px 16px;
-  margin-right: 12px;
+  // margin-right: 12px;
   height: 50px;
   font-size: 16px;
   line-height: 1.25;
@@ -55,5 +96,24 @@
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @include tablet {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.subform {
+  @include desktop {
+    display: flex;
   }
 }

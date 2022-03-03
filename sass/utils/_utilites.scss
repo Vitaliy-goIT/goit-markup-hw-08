@@ -41,8 +41,8 @@
   list-style: none;
 }
 
-.nav-item.current {
-  color: var(--accent);
+.current {
+  color: $accent;
 }
 
 .margin:not(:first-child) {
