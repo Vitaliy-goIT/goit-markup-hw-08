@@ -129,6 +129,10 @@ img {
   clip: rect(0 0 0 0);
 }
 
+.hide {
+  display: none;
+}
+
 .button {
   padding: 10px 10px;
   min-width: 200px;
