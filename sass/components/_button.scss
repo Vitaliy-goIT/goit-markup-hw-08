@@ -23,14 +23,14 @@
     background-color: $buttonHoverColor;
   }
 
-  &--icon::after {
-    display: inline-block;
-    content: "";
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    background-image: url(../../images/icons/send-1.svg);
-  }
+  // &--icon::after {
+  //   display: inline-block;
+  //   content: "";
+  //   width: 24px;
+  //   height: 24px;
+  //   margin-left: 10px;
+  //   background-image: url(../../images/icons/send-1.svg);
+  // }
 
   &--send {
     display: block;
@@ -59,4 +59,11 @@
       fill: $accent;
     }
   }
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  fill: $buttonTextColor;
+  margin-left: 10px;
 }

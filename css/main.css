@@ -166,15 +166,6 @@ img {
   background-color: #188ce8;
 }
 
-.button--icon::after {
-  display: inline-block;
-  content: "";
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  background-image: url(../../images/icons/send-1.svg);
-}
-
 .button--send {
   display: block;
   margin-left: auto;
@@ -199,6 +190,13 @@ img {
 
 .burger--close:hover, .burger--close:focus {
   fill: #2196f3;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  margin-left: 10px;
 }
 
 .logo {
