@@ -48,7 +48,14 @@
     fill: $accent;
   }
 
+  @include tablet {
+    display: none;
+  }
+
   &--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     display: block;
     margin-left: auto;
     border: none;

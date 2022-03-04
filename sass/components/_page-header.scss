@@ -8,11 +8,20 @@
   // align-items: center;
   display: none;
 
+  @include tablet {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+  }
+
+  @include desktop {
+    margin-left: 93px;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     list-style: none;
-    margin-left: 93px;
   }
 
   &__item:not(:first-child) {
@@ -41,9 +50,14 @@
 
 .contacts-list {
   // display: flex;
-  list-style: none;
-  margin-left: auto;
+
   display: none;
+
+  @include tablet {
+    display: block;
+    list-style: none;
+    margin-left: auto;
+  }
 
   &__item {
     display: inline-flex;
@@ -116,10 +130,18 @@
   }
 }
 
+.mob-menu {
+  @include tablet {
+    display: none;
+  }
+}
+
 .mob {
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding-top: 48px;
 }
 
 .mob-menu-contacts-list {
@@ -152,12 +174,17 @@
 
 .mob-menu-social-list {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
 
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+
+  @include tel {
+    gap: 5px;
+  }
 }
 
 .mob-menu-social-item {
@@ -165,17 +192,18 @@
   align-items: center;
 }
 
-.mob-menu-social-item + .mob-menu-social-item::before {
-  content: "";
-  display: inline-flex;
-  text-align: start;
-  width: 22px;
-  height: 1px;
-  background-color: rgba(33, 33, 33, 0.2);
-  // color: rgba(33, 33, 33, 0.2);
-  // border: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
-  margin-right: 5px;
+@include tel {
+  .mob-menu-social-item + .mob-menu-social-item::before {
+    content: "";
+    display: inline-flex;
+    text-align: start;
+    width: 22px;
+    height: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+
+    transform: rotate(90deg);
+    margin-right: 5px;
+  }
 }
 
 .mob-menu-social-link {
