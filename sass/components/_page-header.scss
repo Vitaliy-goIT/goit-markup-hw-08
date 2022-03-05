@@ -1,6 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
   padding: 10px 0;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .navigation {
@@ -49,14 +53,18 @@
 }
 
 .contacts-list {
-  // display: flex;
-
   display: none;
 
   @include tablet {
-    display: block;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
+    gap: 10px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 30px;
   }
 
   &__item {
@@ -64,7 +72,7 @@
     align-items: center;
 
     &:not(:first-child) {
-      margin-left: 50px;
+      // margin-left: 50px;
     }
   }
 
@@ -99,6 +107,7 @@
 .mob-menu {
   position: absolute;
   background-color: #fff;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
   top: 0;
