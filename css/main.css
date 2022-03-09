@@ -431,6 +431,7 @@ img {
   left: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+  z-index: 5;
 }
 
 .mob-menu__list {
