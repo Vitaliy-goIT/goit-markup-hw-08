@@ -40,6 +40,10 @@
   text-transform: uppercase;
   color: $secondaryTextColor;
   text-align: center;
+
+  @include tablet {
+    text-align: start;
+  }
 }
 
 .peculiarities__icon {
